@@ -23,30 +23,46 @@ import Post from '../../Post/Post';
 // 1
 
 const Main = (props) => {
-    const posts = [
-        {
-            id : 1,
-            descr : "description1",
-            title : "title1",
-        },
-        {
-            descr : "description2",
-            title : "title2",
-        },
-        {
-            descr : "description3",
-            title : "title3",
-        },
+    // const posts = [
+    //     {
+    //         id : 1,
+    //         descr : "description1",
+    //         title : "title1",
+    //     },
+    //     {
+    //         descr : "description2",
+    //         title : "title2",
+    //     },
+    //     {
+    //         descr : "description3",
+    //         title : "title3",
+    //     },
 
 
-    ]
-   
+    // ]
+   let post1 ={
+         id : 1,
+           descr : "description1",
+           title : "title1",
+   }
+   let post2 ={
+         id : 1,
+        descr : "description2",
+         title : "title2",
+    }
+    let post3 ={
+      id : 1,
+      descr : "description3",
+      title : "title3",
+}
+
+
+
     return (
        <main>
-       {posts.map((post) =>{
-            return <Post key={post.id} post={post} />
-        })}
-        
+      <Post  title={post1.title} descr={post1.descr}/>
+      <Post  title={post2.title} descr={post2.descr}/>
+      <Post  title={post3.title} descr={post3.descr}/>
        </main>
     )
 };
